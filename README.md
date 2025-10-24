@@ -37,7 +37,7 @@ pip install -r requirements.txt
 3. Run the script:
 
 ```bash
-python l1_vs_l2_logistic_regression.py
+python main.py
 ```
 
 ## Observations
