@@ -1,0 +1,46 @@
+======================================================================
+L1 vs L2 REGULARIZATION - WEIGHT COMPARISON
+======================================================================
+
+L1 Accuracy: 0.9825
+L2 Accuracy: 0.9825
+
+----------------------------------------------------------------------
+Weight Values Comparison:
+----------------------------------------------------------------------
+                Feature  L1 Weight  L2 Weight
+            mean radius   0.000000  -0.345099
+           mean texture   0.000000  -0.361134
+         mean perimeter   0.000000  -0.301418
+              mean area   0.000000  -0.432251
+        mean smoothness   0.000000  -0.174562
+       mean compactness   0.485905   0.637073
+         mean concavity   0.000000  -0.769394
+    mean concave points  -2.804595  -1.124178
+          mean symmetry   0.000000   0.214288
+ mean fractal dimension   0.000000   0.113084
+           radius error  -2.518408  -1.255444
+          texture error   0.325388   0.161098
+        perimeter error   0.000000  -0.617956
+             area error   0.000000  -0.906936
+       smoothness error  -0.378136  -0.190110
+      compactness error   0.538439   0.608012
+        concavity error   0.000000  -0.065792
+   concave points error   0.000000  -0.440737
+         symmetry error   0.430130   0.481329
+fractal dimension error   0.442369   0.682337
+           worst radius  -0.686765  -0.816793
+          worst texture  -1.685626  -1.283700
+        worst perimeter   0.000000  -0.538529
+             worst area  -2.386467  -0.817779
+       worst smoothness  -0.110467  -0.503271
+      worst compactness   0.000000   0.124798
+        worst concavity  -1.326970  -0.972104
+   worst concave points  -0.109486  -0.792676
+         worst symmetry  -0.983945  -1.187337
+worst fractal dimension   0.000000  -0.112165
+
+L1 - Near-zero weights: 15/30
+L2 - Near-zero weights: 0/30
+
+======================================================================
