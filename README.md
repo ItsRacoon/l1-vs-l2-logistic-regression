@@ -45,13 +45,55 @@ Below are the generated plots that illustrate coefficient distributions, sparsit
 
 ### L1 — top 10 coefficients
 
-![L1 top 10](images/L1-top10.png)
+# L1 vs L2 Regularization in Logistic Regression
 
-### All feature coefficients
+## Project Overview
 
-![All features](images/all-features.png)
+This repository compares L1 and L2 regularization applied to logistic regression. The code in `main.py` now uses the Wine dataset from scikit-learn and demonstrates differences in learned weights for a multiclass problem.
 
-> Note: Image files are referenced from the `images/` folder. If any image doesn't render, check the exact filenames in that directory.
+## Dataset (current code)
+
+- Source: `sklearn.datasets.load_wine`
+# L1 vs L2 Regularization in Logistic Regression
+
+## Project Overview
+
+This repository compares L1 and L2 regularization applied to logistic regression. The example code in `main.py` uses the Wine dataset from scikit-learn and demonstrates differences in learned weights for a multiclass problem.
+
+## Dataset (current code)
+
+- Source: `sklearn.datasets.load_wine`
+- Features: 13 numeric features
+- Target: Multiclass classification (3 wine classes)
+
+## What changed
+
+- The example was updated to use the Wine dataset (see `main.py`).
+- Models are trained with `LogisticRegression` (solver='saga', `multi_class='ovr'`, `max_iter=5000`).
+- The script prints class-specific weight comparisons and accuracy for L1 vs L2.
+
+## Steps implemented by `main.py`
+
+1. Load the Wine dataset.
+2. Split into train/test sets (30% test).
+3. Standardize features with `StandardScaler`.
+4. Train logistic regression models with L1 and L2 penalties.
+5. Print test accuracies and count near-zero weights.
+6. Create two visualizations saved/shown by the script.
+
+## Visualizations
+
+Current image files in the `images/` folder are used by the README. Spaces in filenames are URL-encoded below so they render correctly on GitHub.
+
+### Weight distribution (histogram)
+
+![Weight distribution](images/weight%20distribution.png)
+
+### Weight comparison (bar chart L1 vs L2)
+
+![Weight comparison](images/weight%20comparison.png)
+
+> If you add or rename files in `images/`, update these links or rename files to remove spaces (recommended).
 
 ## Usage
 
@@ -60,23 +102,25 @@ Below are the generated plots that illustrate coefficient distributions, sparsit
 
 ```bash
 python -m venv venv
-# Windows activate: venv\Scripts\activate
+# On Windows (PowerShell): venv\Scripts\Activate.ps1
+# On Windows (cmd): venv\Scripts\activate.bat
 source venv/bin/activate    # On UNIX-like systems
 pip install -r requirements.txt
 ```
 
-3. Run the script (adjust the script name if needed):
+3. Run the script:
 
 ```bash
 python main.py
 ```
 
-## Observations
+The script prints L1 and L2 test accuracies and displays two plots (a histogram of weight distributions and a bar-chart comparison).
 
-- **L1 regularization** sets some coefficients to exactly zero → feature selection.
-- **L2 regularization** shrinks coefficients but keeps all features.
-- Accuracy is usually similar, but L1 improves interpretability.
-- Visualization shows the differences in coefficient magnitude and sparsity.
+## Notes & next steps
+
+- Consider renaming image files to remove spaces (e.g. `weight-distribution.png`) for portability.
+- Optionally save the generated figures from `main.py` into `images/` with deterministic filenames.
+- Add an example output block to the README after running the script once.
 
 ## Author
 
