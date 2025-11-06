@@ -70,4 +70,3 @@ The script prints L1 and L2 test accuracies and displays two plots (a histogram 
 
 - Vishesh Kumar
 
-s
